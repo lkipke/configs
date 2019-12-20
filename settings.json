@@ -1,43 +1,126 @@
 {
-    "files.autoSave": "onFocusChange",
-    "editor.minimap.enabled": false,
-    "window.zoomLevel": 2,
-    "editor.fontSize": 13,
-    "typescript.implementationsCodeLens.enabled": true,
-    "eslint.alwaysShowStatus": true,
-    "eslint.autoFixOnSave": true,
-    "eslint.packageManager": "yarn",
-    "editor.defaultFormatter": "ms-vscode.vscode-typescript-tslint-plugin",
-    "[typescript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
+  "workbench.colorTheme": "Solarized Dark",
+  "window.zoomLevel": 2,
+  "files.autoSave": "onFocusChange",
+  "editor.tabSize": 2,
+  "editor.fontSize": 13,
+  "editor.formatOnSave": true,
+  "editor.suggestSelection": "first",
+  "editor.minimap.enabled": false,
+  "editor.parameterHints.enabled": false,
+  "prettier.singleQuote": true,
+  "prettier.jsxSingleQuote": true,
+  "eslint.run": "onSave",
+  "explorer.confirmDelete": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.implementationsCodeLens.enabled": true,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.blame.heatmap.enabled": false,
+  "gitlens.codeLens.scopes": [
+    "document"
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        ";"
+      ],
+      "after": [
+        ":"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "p"
+      ],
+      "after": [
+        "p",
+        "g",
+        "v",
+        "y"
+      ]
+    }
+  ],
+  "bracketPairColorizer.consecutivePairColors": [
+    "()",
+    "[]",
+    "{}",
+    [
+      "Fuschia",
+      "DarkSeaGreen",
+      "DeepSkyBlue",
+      "DarkSalmon",
+      "DarkGoldenRod",
+      "Olive",
+      "Orchid",
+      "LightSkyBlue"
+    ],
+    "Red"
+  ],
+  "bracketPairColorizer.independentPairColors": [
+    [
+      "()",
+      [
+        "Fuschia",
+        "DarkSeaGreen",
+        "DeepSkyBlue",
+        "DarkSalmon",
+        "DarkGoldenRod",
+        "Olive",
+        "Orchid",
+        "LightSkyBlue"
+      ],
+      "Red"
+    ],
+    [
+      "[]",
+      [
+        "Fuschia",
+        "DarkSeaGreen",
+        "DeepSkyBlue",
+        "DarkSalmon",
+        "DarkGoldenRod",
+        "Olive",
+        "Orchid",
+        "LightSkyBlue"
+      ],
+      "Red"
+    ],
+    [
+      "{}",
+      [
+        "Fuschia",
+        "DarkSeaGreen",
+        "DeepSkyBlue",
+        "DarkSalmon",
+        "DarkGoldenRod",
+        "Olive",
+        "Orchid",
+        "LightSkyBlue"
+      ],
+      "Red"
+    ]
+  ],
+  "emojisense.languages": {
+    "markdown": true,
+    "plaintext": {
+      "markupCompletionsEnabled": false,
+      "emojiDecoratorsEnabled": false
     },
-    "tslint.configFile": "./build/tasks/lint/tslint.json",
-    "editor.codeActionsOnSave": {
-        "source.fixAll.tslint": true 
-    },
-    "workbench.colorTheme": "Solarized Dark",
-    "gitlens.blame.heatmap.enabled": false,
-    "gitlens.codeLens.scopes": [
-        "document"
-    ],
-    "vim.normalModeKeyBindings": [
-        {
-            "before": [";"],
-            "after": [":"]
-        }
-    ],
-    "vim.visualModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "p"
-            ],
-            "after": [
-                "p",
-                "g",
-                "v",
-                "y"
-            ]
-        }
-    ],
-    "explorer.confirmDelete": false
+    "git-commit": true,
+    "javascript": true,
+    "javascriptreact": true,
+    "html": true,
+    "typescript": true,
+    "typescriptreact": true
+  }
 }
