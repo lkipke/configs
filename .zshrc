@@ -29,6 +29,7 @@ source $ZSH/oh-my-zsh.sh
 # misc
 alias vz="vim ~/.zshrc"
 alias y="yarn"
+alias c="clear"
 
 # custom git
 alias up="git fetch -p upstream"
