@@ -1,0 +1,43 @@
+{
+    "files.autoSave": "onFocusChange",
+    "editor.minimap.enabled": false,
+    "window.zoomLevel": 2,
+    "editor.fontSize": 13,
+    "typescript.implementationsCodeLens.enabled": true,
+    "eslint.alwaysShowStatus": true,
+    "eslint.autoFixOnSave": true,
+    "eslint.packageManager": "yarn",
+    "editor.defaultFormatter": "ms-vscode.vscode-typescript-tslint-plugin",
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "tslint.configFile": "./build/tasks/lint/tslint.json",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.tslint": true 
+    },
+    "workbench.colorTheme": "Solarized Dark",
+    "gitlens.blame.heatmap.enabled": false,
+    "gitlens.codeLens.scopes": [
+        "document"
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [";"],
+            "after": [":"]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "p"
+            ],
+            "after": [
+                "p",
+                "g",
+                "v",
+                "y"
+            ]
+        }
+    ],
+    "explorer.confirmDelete": false
+}
