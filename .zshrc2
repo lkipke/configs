@@ -1,0 +1,95 @@
+export PATH=/usr/local/<foo>:$HOME/dev/<bar>:$PATH
+export ZSH="/Users/levi.kipke/.oh-my-zsh"
+
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="bira"
+
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+HYPHEN_INSENSITIVE="true"
+DISABLE_UPDATE_PROMPT="true"
+COMPLETION_WAITING_DOTS="true"
+# ENABLE_CORRECTION="true"
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS=true
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repos much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Standard plugins: ~/.oh-my-zsh/plugins/*
+# Custom plugins: ~/.oh-my-zsh/custom/plugins/
+plugins=(
+  git
+  zsh-completions
+  zsh-nvm
+)
+autoload -U compinit && compinit
+
+source $ZSH/oh-my-zsh.sh
+
+#####################
+## auto switch nvm ##
+#####################
+autoload -U add-zsh-hook
+load-nvmrc() {
+  local node_version="$(nvm version)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
+    fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+
+######################
+# User configuration #
+######################
+
+setopt auto_cd
+cdpath=($HOME/dev)
+
+# Run command line commands with args, via an alias
+alias runcommand='function _runcommand() { foo -a $1 -b $2 -c $3 && bar }; _runcommand'
+
+# List all IPv4 IP addresses configured on your network interface, excluding loopback.
+# Usage: "ip"
+alias ip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
+
+# misc
+alias vz="vim ~/.zshrc"
+alias y="yarn"
+alias c="clear"
+alias urlencode='python3 -c "import sys, urllib.parse as ul; \
+    print (ul.quote_plus(sys.argv[1]))"'
+alias urldecode='python3 -c "import sys, urllib.parse as ul; \
+    print(ul.unquote_plus(sys.argv[1]))"'
+alias getgit="alias | grep 'git'"
+
+# custom git
+alias up="git fetch -p upstream"
+alias grbm="up && git rebase upstream/main"
+alias grbu='function _grbu() { echo "up && git rebase upstream/$1"; up && grb upstream/$1 }; _grbu'
+alias grbiu="git rebase -i upstream/main"
+alias gu2o="up && git push -f origin upstream/main:refs/heads/main"
+alias grhmas="up && git rh upstream/master"
+alias grhm="up && git rhm"
+alias grhu="up && git rhu"
+alias grho="up && git rho"
+alias gce="git commit --allow-empty -m 'Empty commit to trigger new builds'"
+alias glg="g lg"
+alias gpo="git push origin"
+alias gpoh="git push origin head"
+alias gpuh="git push upstream head"
+

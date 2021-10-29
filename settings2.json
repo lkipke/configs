@@ -1,0 +1,136 @@
+{
+    "files.autoSave": "onFocusChange",
+    "editor.minimap.enabled": false,
+    "window.zoomLevel": 2,
+    "editor.fontSize": 13,
+    "typescript.implementationsCodeLens.enabled": true,
+    "eslint.alwaysShowStatus": true,
+    "eslint.packageManager": "yarn",
+    "editor.defaultFormatter": "ms-vscode.vscode-typescript-tslint-plugin",
+    "workbench.colorTheme": "Solarized Light",
+    "gitlens.blame.heatmap.enabled": false,
+    "gitlens.codeLens.scopes": [
+        "document"
+    ],
+    "vim.debug.silent": true,
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                ";"
+            ],
+            "after": [
+                ":"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "p"
+            ],
+            "after": [
+                "p",
+                "g",
+                "v",
+                "y"
+            ]
+        }
+    ],
+    "explorer.confirmDelete": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "files.insertFinalNewline": true,
+    "javascript.format.semicolons": "insert",
+    "typescript.format.semicolons": "insert",
+    "gitlens.menus": {
+        "editorGroup": false,
+        "editorTab": {
+            "clipboard": true,
+            "compare": true,
+            "history": true,
+            "remote": true
+        },
+        "explorer": {
+            "clipboard": true,
+            "compare": true,
+            "history": true,
+            "remote": true
+        },
+        "scmGroup": {
+            "compare": true,
+            "openClose": true,
+            "stash": true,
+            "stashInline": true
+        },
+        "scmItem": {
+            "clipboard": true,
+            "compare": true,
+            "history": true,
+            "remote": true,
+            "stash": true
+        }
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "prettier.tabWidth": 4,
+    "workbench.editor.showTabs": true,
+    "files.associations": {
+        "translations.ts": "xml",
+        "*.brs": "vb",
+        "*.underscore": "handlebars"
+    },
+    "extensions.ignoreRecommendations": false,
+    "eslint.workingDirectories": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "test/**/*.ts",
+        "test/**/*.tsx",
+        // if you have a mixed JS/TS codebase, don't forget to include your JS files
+        "src/**/*.js",
+        "test/**/*.js"
+    ],
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "ctags.languages": [
+        "all"
+    ],
+    "ctags.excludePatterns": [
+        "node_modules/*",
+        "coverage/*",
+        ".git/*"
+    ],
+    "eslint.probe": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "html",
+        "vue",
+        "markdown",
+        "vb",
+        "brs",
+        "brightscript"
+    ],
+    "files.exclude": {
+        ".tags": true
+    },
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.cursorStyle": "line",
+    "editor.lineNumbers": "on",
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.wordWrap": "off",
+    "editor.detectIndentation": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "command-runner.commands": {
+        "ctags": "ctags --exclude=.git --exclude=node_modules --exclude=coverage -f .tags -R --langmap=BASIC:+.brs ."
+    }
+}
